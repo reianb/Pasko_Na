@@ -3,13 +3,17 @@ let red = [];
 let yellow = [];
 var cnv;
 let blueY = 200;
-let blueX = 300;
+let blueX = 50;
+let redY = 200;
+let redX = 400;
+let yellowX = 750;
+let yellowY = 200;
 
 function preload(){
   for (let i = 0; i < 2; i++) {
-    blue = loadImage("assets/blue"+i+".png");
-    red = loadImage("assets/red"+i+".png");
-    yellow = loadImage("assets/yellow"+i+".png");
+    blue[i] = loadImage("assets/blue"+i+".png");
+    red[i] = loadImage("assets/red"+i+".png");
+    yellow[i] = loadImage("assets/yellow"+i+".png");
   }
 }
 
@@ -20,14 +24,16 @@ function centerCanvas() {
 }
 
 function setup() {
-  cnv = createCanvas(1000, 800);
+  cnv = createCanvas(1100, 800);
   centerCanvas();
 }
 
 function draw() {
   background(245);
-  if (dist(blueX,blueY,mouseX,mouseY)< 100/2){
-    console.log("you are hovering over the star");
+  if (dist(blueX,blueY,mouseX,mouseY)< 400){
+    console.log("you are hovering over the blue star");
   }
-  //image(blue[0],400,400,100,100);
+  image(blue[0],blueX,blueY,300,300);
+  image(red[0],redX,redY,300,300);
+  image(yellow[0],yellowX,yellowY,300,300);
 }
