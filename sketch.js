@@ -18,11 +18,11 @@ function centerCanvas() {
 }
 
 function setup() {
-  cnv = createCanvas(1000, 800);
-  background(125);
-  centerCanvas();
+  createCanvas(1000, 800);
+  //centerCanvas();
 }
 
 function draw() {
-
+  background(245);
+  image(blue[0],400,400,100,100);
 }
