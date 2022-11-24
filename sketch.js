@@ -30,10 +30,22 @@ function setup() {
 
 function draw() {
   background(245);
-  if (dist(blueX,blueY,mouseX,mouseY)< 400){
-    console.log("you are hovering over the blue star");
-  }
   image(blue[0],blueX,blueY,300,300);
   image(red[0],redX,redY,300,300);
   image(yellow[0],yellowX,yellowY,300,300);
+  //ellipse(blueX, blueY, 300);
+  //ellipse(redX,redY,300);
+
+  if (dist(blueX,blueY,mouseX,mouseY)< 270){
+    image(blue[1],blueX,blueY,300,300);
+  }
+  if (dist(redX,redY,mouseX,mouseY)< 270){
+    image(red[1],redX,redY,300,300);
+  }
+
+  if(dist(yellowX,yellowY,mouseX,mouseY)< 270){
+    image(yellow[1],yellowX,yellowY,300,300);
+  }
+
 }
+  
