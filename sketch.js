@@ -2,12 +2,12 @@ let blue = [];
 let red = [];
 let yellow = [];
 var cnv;
-let blueY = 200;
-let blueX = 50;
-let redY = 200;
-let redX = 400;
-let yellowX = 750;
-let yellowY = 200;
+let blueY = 350;
+let blueX = 200;
+let redY = 350;
+let redX = 550;
+let yellowX = 900;
+let yellowY = 350;
 
 function preload(){
   for (let i = 0; i < 2; i++) {
@@ -26,6 +26,7 @@ function centerCanvas() {
 function setup() {
   cnv = createCanvas(1100, 800);
   centerCanvas();
+  imageMode(CENTER);
 }
 
 function draw() {
@@ -33,8 +34,6 @@ function draw() {
   image(blue[0],blueX,blueY,300,300);
   image(red[0],redX,redY,300,300);
   image(yellow[0],yellowX,yellowY,300,300);
-  ellipse(blueX, blueY, 300);
-  ellipse(redX,redY,300);
 
   if (dist(blueX,blueY,mouseX,mouseY)< 300/2){
     image(blue[1],blueX,blueY,300,300);
