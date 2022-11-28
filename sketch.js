@@ -32,10 +32,10 @@ function setup() {
   cnv = createCanvas(1100, 800);
   centerCanvas();
   imageMode(CENTER);
+  setInterval(countdownBg, 1000);
 }
 
 function draw() {
-  setInterval(countdownBg, 1000);
   background(125,164,120);
   image(time[count],550,400);
   image(blue[0],blueX,blueY,300,300);
