@@ -43,13 +43,16 @@ function draw() {
   image(yellow[0],yellowX,yellowY,300,300);
 
   if (dist(blueX,blueY,mouseX,mouseY)< 300/2){
+    background(125,164,120);
     image(blue[1],blueX,blueY,300,300);
   }
   if (dist(redX,redY,mouseX,mouseY)< 300/2){
+    background(125,164,120);
     image(red[1],redX,redY,300,300);
   }
 
   if(dist(yellowX,yellowY,mouseX,mouseY)< 300/2){
+    background(125,164,120);
     image(yellow[1],yellowX,yellowY,300,300);
   }
 
