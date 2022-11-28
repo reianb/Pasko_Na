@@ -17,7 +17,7 @@ function preload(){
     red[i] = loadImage("assets/red"+i+".png");
     yellow[i] = loadImage("assets/yellow"+i+".png");
   }
-  for (let i =0; i < 1; i++) {
+  for (let i =0; i < 5; i++) {
     time[i] = loadImage("assets/time"+i+".png");
   }
 }
@@ -58,7 +58,7 @@ function draw() {
 function countdownBg(){
   count ++;
 
-    if (count >= 2){
+    if (count > 6){
       count = 0;
     }
 }
