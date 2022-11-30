@@ -10,6 +10,7 @@ let redX = 550;
 let yellowX = 900;
 let yellowY = 370;
 let count = 0;
+let handaan;
 
 function preload(){
   for (let i = 0; i < 2; i++) {
@@ -20,6 +21,7 @@ function preload(){
   for (let i =0; i < 16; i++) {
     time[i] = loadImage("assets/time"+i+".png");
   }
+  handaan = loadImage("assets/handaan.jpg");
 }
 
 function centerCanvas() {
@@ -43,7 +45,7 @@ function draw() {
   image(yellow[0],yellowX,yellowY,300,300);
 
   if (dist(blueX,blueY,mouseX,mouseY)< 300/2){
-    background(125,164,120);
+    image(handaan, 550,400);
     image(blue[1],blueX,blueY,300,300);
   }
   if (dist(redX,redY,mouseX,mouseY)< 300/2){
