@@ -17,7 +17,7 @@ function preload(){
     red[i] = loadImage("assets/red"+i+".png");
     yellow[i] = loadImage("assets/yellow"+i+".png");
   }
-  for (let i =0; i < 12; i++) {
+  for (let i =0; i < 16; i++) {
     time[i] = loadImage("assets/time"+i+".png");
   }
 }
@@ -61,7 +61,7 @@ function draw() {
 function countdownBg(){
   count ++;
 
-    if (count >12){
+    if (count >16){
       count = 0;
     }
 }
